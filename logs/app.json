@@ -1,0 +1,4 @@
+[
+{"timestamp": "2025-06-26 10:52:27", "level": "INFO", "logger": "rpa_app", "message": "Iniciando processo RPA..."},
+{"timestamp": "2025-06-26 10:52:27", "level": "SUCCESS", "logger": "rpa_app", "message": "Primeira etapa concluída com sucesso!"}
+]

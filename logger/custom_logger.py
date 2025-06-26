@@ -69,13 +69,6 @@ class CustomLogger(logging.Logger):
         super().log(FAIL_LEVEL, msg, *args, exc_info=exc, **kwargs)
         self._send_to_api(FAIL_LEVEL, msg, exc_info=exc)
 
-        # Sentry opcional (se configurado)
-        if config.USE_SENTRY:
-            try:
-                import sentry_sdk
-                sentry_sdk.capture_exception()
-            except ImportError:
-                pass
 
         # Encerra o processo se configurado
         if config.STOP_ON_FAIL:

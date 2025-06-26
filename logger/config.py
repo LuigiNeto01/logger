@@ -5,7 +5,7 @@ from pathlib import Path
 ROTA_API = "http://localhost:8000/"
 
 # Quando True, cada log enviado localmente também será POSTado na sua API
-MONITOR_API_ENABLED: bool = True  
+MONITOR_API_ENABLED: bool = False  
 
 # URL completa do endpoint de ingestão de logs da API de monitoramento
 # ex: "http://localhost:8000/logs"
@@ -37,7 +37,3 @@ EMIT_FAIL_EVENT: bool = False    # Se True, emite evento ao chamar logger.fail()
 # Callbacks de evento (se necessário, para integração com sistema de eventos do RPA)
 SUCCESS_EVENT_CALLBACK = None    # Ex: função a ser chamada em success (pode ser definido pelo usuário)
 FAIL_EVENT_CALLBACK = None       # Ex: função a ser chamada em fail
-
-# Integração com Sentry (opcional, futura)
-USE_SENTRY: bool = False
-SENTRY_DSN: str = ""  # DSN do Sentry se USE_SENTRY for True (para enviar erros ao Sentry)
